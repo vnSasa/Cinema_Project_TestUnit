@@ -120,11 +120,12 @@ public class Cinema {
 			for (Schedule schedule : schedules.values()) {
 				if (currentDay.toString().equalsIgnoreCase(day)) {
 					schedule.removeSeance(seance);
+					System.out.println("The seance was successfully removed");
+					return true;
 				}
 			}
 		}
-		System.out.println("The seance was successfully removed");
-		return true;
+		return false;
 	}
 
 	public boolean removeAllSeancesByMovie(String title) {
